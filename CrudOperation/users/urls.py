@@ -1,9 +1,6 @@
 from django.urls import path
-from .views import *
+from .views import reset_password_view
 
 urlpatterns = [
-    path('',UserList.as_view()),
-    path('<int:pk>/',DetailUser.as_view()),
-    path('create/',CreateUser.as_view()),
-    path('delete/<int:pk>/',DeleteUser.as_view())
+    path("reset-password/", reset_password_view, name="reset-password"),
 ]
